@@ -1,0 +1,30 @@
+package scjp;
+
+public class Animal {
+
+	String name;
+	
+	Animal(String name){
+		this.name=name;
+	}
+	
+	Animal(){
+		this(makeRandomName());
+	}
+	
+	static String makeRandomName(){
+		int x = (int) (Math.random() * 5);
+		String name = new String [] {"Fluffy","Fido","Rover","Dibyendu","Gigi","Senthil"}[x];
+		return name;
+	}
+	
+	public static void main (String [] args) {
+		Animal a = new Animal();
+		System.out.println(a.name);
+		Animal b = new Animal("Test");
+		System.out.println(b.name);
+	}
+	
+	
+	
+}
